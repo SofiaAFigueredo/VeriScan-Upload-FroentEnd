@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 13, "column": 0}, "map": {"version":3,"sources":["file:///home/sofia/Documentos/GitHub/VeriScan-Upload-FroentEnd/src/app/favicon.ico.mjs%20%28structured%20image%20object%29"],"sourcesContent":["import src from \"IMAGE\";\nexport default { src, width: 256, height: 256 }\n"],"names":["src","width","height"],"mappings":";;;;AAAA;;uCACe;IAAEA,KAAAA,uLAAG;IAAEC,OAAO;IAAKC,QAAQ;AAAI"}},
+    {"offset": {"line": 28, "column": 0}, "map": {"version":3,"sources":["file:///home/sofia/Documentos/GitHub/VeriScan-Upload-FroentEnd/src/app/page.tsx"],"sourcesContent":["import { Inicial } from \"./_components/inicial3\";\n\nexport default function Home() {\n  return (\n      <Inicial/>\n  );\n}\n"],"names":["Home","Inicial"],"mappings":";;;;;;;;;;;;AAEe,SAASA;IACtB,qBACI,2RAACC;;;;;AAEP"}}]
+}
