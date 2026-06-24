@@ -7,9 +7,7 @@ type Props = {
 }
 
 export function ThumbnailPreview({ file }: Props) {
-  const [src, setSrc] = useState<string | null>(() => URL.createObjectURL(file))
-  // useState com função inicializadora: cria a URL só uma vez,
-  // evitando recriar a cada render
+  const [src] = useState<string>(() => URL.createObjectURL(file))
 
   if (!src) return null
 
@@ -19,7 +17,12 @@ export function ThumbnailPreview({ file }: Props) {
       src={src}
       alt=""
       className="w-full h-full object-cover"
-      onLoad={() => URL.revokeObjectURL(src)}
+      style={{ imageRendering: 'auto' }}
+      onLoad={(e) => {
+        // Revoga a URL só depois que a imagem carregou completamente
+        const target = e.currentTarget
+        setTimeout(() => URL.revokeObjectURL(target.src), 5000)
+      }}
     />
   )
 }
